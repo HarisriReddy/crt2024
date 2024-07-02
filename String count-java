@@ -1,0 +1,36 @@
+Read a string and print no.of alphabets,uppercase letters,lowercase letters,digits and special symbols.
+
+import java.util.*;
+class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+        Scanner S=new Scanner(System.in);
+        String str=S.nextLine();
+        int alp=0,upp=0,lo=0,dig=0,spe=0;
+        for(int i=0;i<str.length();i++)
+        {
+           char ch=str.charAt(i); 
+            if(Character.isLetter(ch))
+            {
+                alp++; 
+                 if(Character.isUpperCase(ch))
+                 upp++;
+                 else
+                 lo++;
+            }
+            else if(Character.isDigit(ch))
+            dig++;
+            else
+            spe++;
+        }
+                 
+        System.out.println("Alphabets="+alp);
+        System.out.println("Upper case="+upp);
+        System.out.println("Lowercase="+lo);
+        System.out.println("Digits="+dig);
+        System.out.println("Special symbols="+spe);
+        }
+       
+    
+}
